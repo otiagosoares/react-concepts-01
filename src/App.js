@@ -24,7 +24,7 @@ function App() {
         "likes": 0
       });
 
-      console.log('repository', repository);
+      // console.log('repository', repository);
       setRepositories([...repositories, repository.data]);
       setLoading(false);
 
@@ -74,7 +74,7 @@ function App() {
       <ul data-testid="repository-list">
         {repositories.length > 0 && repositories.map(repo =>(
           <li key={repo.id}>
-            {repo.title} - {repo.url}
+            {repo.title}
 
             <button onClick={() => handleRemoveRepository(repo.id)}>
               Remover
